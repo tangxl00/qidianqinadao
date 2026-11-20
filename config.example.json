@@ -1,9 +1,9 @@
 [
   {
     "name": "账号A",
-    "ywkey": "抓包得到的 ywkey 值",
-    "ywguid": "抓包得到的 ywguid 值",
-    "cmfuToken": "可选，抓到就填",
-    "QDHeader": "可选，抓到就填"
+    "ywkey": "抓包 Cookie 里的 ywkey",
+    "ywguid": "抓包 Cookie 里的 ywguid",
+    "QDH": "抓包 Cookie 里的 QDH",
+    "sdk_sign": "抓包 Header 里的 SDKSign"
   }
 ]
