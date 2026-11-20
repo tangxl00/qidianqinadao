@@ -1,9 +1,9 @@
 [
   {
     "name": "账号A",
-    "sdk_sign": "替换成你的SDKSign",
-    "qdinfo": "替换成你的QDInfo",
-    "ywkey": "替换成你的ywkey",
-    "ywguid": "替换成你的ywguid"
+    "ywkey": "抓包得到的 ywkey 值",
+    "ywguid": "抓包得到的 ywguid 值",
+    "cmfuToken": "可选，抓到就填",
+    "QDHeader": "可选，抓到就填"
   }
 ]
