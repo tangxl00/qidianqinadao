@@ -1,0 +1,9 @@
+[
+  {
+    "name": "账号A",
+    "sdk_sign": "替换成你的SDKSign",
+    "qdinfo": "替换成你的QDInfo",
+    "ywkey": "替换成你的ywkey",
+    "ywguid": "替换成你的ywguid"
+  }
+]

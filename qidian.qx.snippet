@@ -1,0 +1,16 @@
+# 起点读书自动签到 - Quantumult X 配置片段
+# 来源参考：Yuheng0101/X 的 QDReader 模块
+# 机制：MITM 劫持 h5.if.qidian.com，用 rewrite 拦截 getlogininfo 响应自动刷新凭证，
+#      再用 task_local 定时执行签到。
+
+[mitm]
+hostname = h5.if.qidian.com
+
+[rewrite_local]
+# 拦截"获取登录信息"接口，把响应交给脚本处理，从中提取/刷新 Cookie 与 SDKSign。
+# 这样 APP 自己登录时就会把最新凭证交给脚本，无需每月手动抓包。
+^https?:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/user\/getlogininfo url script-response-body https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/qdreader.js
+
+[task_local]
+# 每天 02:11 执行签到；tag 与图标仅用于 QX 任务列表展示。
+11 2 * * * https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/qdreader.js, tag=起点读书自动签到, enabled=true
